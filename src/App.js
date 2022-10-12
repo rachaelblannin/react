@@ -17,6 +17,30 @@ function App() {
         >
           Learn React
         </a>
+        <h1><b>The life of Brian the Cat</b></h1>
+        <a>
+          <ol>
+            <li>Bites knees</li>
+            <li>Trashes the house</li>
+          </ol>
+        </a>
+        <p>My cat Brian should have been named Chucky</p>
+
+        const profile = () => {
+          const person = {
+            firstName: "Rach",
+            lastName: "B",
+            address: "Castle d'Brian"
+          }
+        
+          return (
+            <div>
+              <h1>person.firstName</h1>
+              <h1>person.lastName</h1>
+              <h1>person.address</h1>
+            </div>
+          );
+          export default profile;
       </header>
     </div>
   );
