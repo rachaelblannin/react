@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Person from './person';
+import Products from "./components/props/Products";
+
 
 function App() {
   return (
@@ -27,7 +29,18 @@ function App() {
         <p>My cat Brian should have been named Chucky</p>
         <Person/>
 
-      
+        <Products/>
+        <Products
+        name="Pencil"
+        price={1.00}
+        description="to write stuff with!"
+        />
+        <Products
+        name="ruler"
+        price={1.00}
+        description="to measure stuff with!"
+        />
+
       </header>
     </div>
   );
