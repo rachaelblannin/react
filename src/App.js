@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Person from './person';
 import Products from "./components/props/Products";
+import Counter from "./components/Counter";
 
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
         price={1.00}
         description="to measure stuff with!"
         />
+
+        <Counter/>
 
       </header>
     </div>
