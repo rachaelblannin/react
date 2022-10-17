@@ -1,39 +1,41 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
-const [film, setFilm = useState();
-const [title, setTitle] = useState();
+const Movie = () => {
+    const [data, setData]= useState("");
+    const [movieTitle, setMovieTitle]= useState("");
 
-useEffect(() => {
-    console.log("Loaded");
-    const getFilm = async () => {
-        try {
-            const res =  await axios.get("http://www.omdbapi.com/?apikey=[99d871f0]" + name);
-            console.log("RESPONSE:", res);
-            setTitle(res.data);
-        } catch(err) {
+    useEffect(() => {
+        const getMovie = async () => {
+            try {
+                const res = await axios.get("http://www.omdbapi.com/?apikey=99d871f0&t=" + movieTitle);
+                console.log("RESPONSE:", res);
+                setData(res.data);
+            } catch(err){
+                console.error("This is an error");
+            }
         }
-    }
 
-    getFilm();
-}, [name]);
+        getMovie();
+}, [movieTitle]);
 
-if (film) {
-    return ( 
+    return (
         <>
-            <label htmlFor="film">Name:</label>
-            <input type="text" id="film" value={name} onChange={e => setName(e.target.value)} />
-            <h2>{poke.name}</h2>
-            <section>
-                <p>Title: {data}.title}</p>
-                <p>Year: {data.year}</p>
-                <p>Plot: {data.Plot}</p>
-            </section>
+        <div>
+            <h2>Movie</h2>
+            <p>Film Name</p>
+            <input type="text" value={movieTitle} onChange={e=>setMovieTitle(e.target.value)}/>
+            
+
+            <h4>{data.Title}</h4>
+            <h4>{data.Year}</h4>
+            <h4>{data.Rated}</h4>
+            <h4>{data.Genre}</h4>
+            <h4>{data.Plot}</h4>
+            <img src={data.Poster} alt="The Poster"></img>
+        </div>
         </>
     );
-} else {
-    return <p>Loading...</p>
-}
-}
+    }
 
-export default Poke;
+export default Movie;

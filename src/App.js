@@ -4,11 +4,14 @@ import Products from "./components/props/Products";
 import Counter from "./components/Counter";
 import Content from "./components/sampleData.json";
 import Person from './components/Person';
+import Movie from './components/movie';
 
 
 function App() {
   return (
     <div className="App">
+
+      <Movie/>
 
       {/* <Person />
 
