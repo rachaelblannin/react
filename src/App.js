@@ -5,6 +5,7 @@ import Counter from "./components/Counter";
 import Content from "./components/sampleData.json";
 import Person from './components/Person';
 import Movie from './components/movie';
+import SearchableList from './components/SearchableList';
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
     <div className="App">
 
       <Movie/>
+
+      <SearchableList/>
 
       {/* <Person />
 
