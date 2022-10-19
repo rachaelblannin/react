@@ -11,6 +11,7 @@ import Home from './components/Home';
 import {
   BrowserRouter as Router, Link, Route, Routes,
 } from 'react-router-dom';
+import ParamsExample from './components/ParamsExample';
 
 
 function App() {
@@ -24,11 +25,15 @@ function App() {
         <Link to="/SearchableList">
           Search List
         </Link>
+        <Link to="/ParamsExample">
+          Example
+        </Link>
         <Navigation/>
       
         <Routes>
           <Route path="/Home" element={<Home/>}/>
           <Route path="/SearchableList" element={<SearchableList/>}/>
+          <Route path="/params/:colour" element={<ParamsExample />}/>
         </Routes>
       </Router>
       </nav>
