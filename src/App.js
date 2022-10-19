@@ -6,12 +6,34 @@ import Content from "./components/sampleData.json";
 import Person from './components/Person';
 import Movie from './components/movie';
 import SearchableList from './components/SearchableList';
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import {
+  BrowserRouter as Router, Link, Route, Routes,
+} from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
+    <nav>
+      <Router>
+        <Link to="/Home">
+          Home
+        </Link>
+        <Link to="/SearchableList">
+          Search List
+        </Link>
+        <Navigation/>
+      
+        <Routes>
+          <Route path="/Home" element={<Home/>}/>
+          <Route path="/SearchableList" element={<SearchableList/>}/>
+        </Routes>
+      </Router>
+      </nav>
 
+      <Home/>
       <Movie/>
 
       <SearchableList/>
