@@ -8,6 +8,7 @@ import Movie from './components/movie';
 import SearchableList from './components/SearchableList';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router, Link, Route, Routes,
 } from 'react-router-dom';
